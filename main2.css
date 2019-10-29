@@ -1,0 +1,260 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+/*Above the fold*/
+.heading
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    background: url(Images/bg-hero-desktop.svg),hsl(193, 100%, 96%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+.lowerHeader
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.heading > div
+{
+    padding: 3% 3% 0% 3%;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.headerButton
+{
+    background:#fff;
+    border: 0px;
+    border-radius: 40px;
+    box-shadow: 2px 2px 3px #eeeeee;
+    padding: 10px 50px; 
+    font-weight: 700;
+    font-size: 1em;
+    position: absolute;
+    right: 3%;
+}
+/*Hover animation for button*/
+.headerButton:hover
+{
+    animation: pulse 1.5s;
+}
+
+@keyframes pulse 
+{
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+.lowerHeader > h1, .internalBox > h1, .actionButton > h1
+{
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+.mockupImage
+{
+    width: 45vw;
+}
+.actionButton
+{
+    background:#ff52bf;
+    border: 0px;
+    border-radius: 40px;
+    padding: 20px 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    box-shadow: 0px 5px 10px #000;
+    transition: 0.2s;
+}
+.actionButton:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px #000;
+    transition: 0.2s;
+}
+/*Main Body*/
+.mainBody
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    min-height: 100vh;
+    padding: 50px;
+}
+.mainBody > div
+{
+   width: 80%;
+   border: 2px solid #eeeeee;
+   box-shadow: 3px 3px 10px #eeeeee;
+   margin-left: 10%; 
+   padding: 0px 15px;
+}
+/*Internal Boxes*/
+.externalBox
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    Font-size: 1.2em;
+    font-weight: 400;
+}
+.internalBoxImage
+{
+    height: 20vw;
+    padding: 15px;
+}
+/*Footer*/
+.footer
+{
+    width: 100%;
+    height: 10%;
+    display: grid;
+    background: hsl(192, 100%, 9%);
+    margin-top: 50px; 
+    color: #fff
+}
+.actionCard
+{
+    background: #fff;
+    color: #000;
+    width: 50%;
+    height: 170px; 
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: -5%;
+    border: 2px solid #eeeeee;
+    text-align: center;
+}
+.actionCard > .actionButton
+{
+    font-size: 1.2em;
+}
+.footerLogoImage
+{
+    width: 200px;
+    padding: 25px 25px 0px 50px;
+}
+.lowerFooter
+{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    grid-gap: 20px;
+}
+.infoCol
+{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 10px;
+}
+.lowerFooter > div:nth-child(2), .lowerFooter > div:nth-child(3)
+{
+    margin-left: 30%;
+}
+.lowerFooter > div > li
+{
+    padding: 10px;
+}
+.lowerFooter > div > i
+{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 6px;
+    margin: 5px;
+}
+.lowerFooter > div > i:nth-child(1)
+{
+    padding: 6px 11px;
+}
+.copyright
+{
+    display: block;
+    margin-top: 65%;
+    font-size: 0.5em; 
+}
+@media (max-width: 768px) 
+{
+    .heading
+    {
+        background: url(Images/bg-hero-mobile.svg),hsl(193, 100%, 96%);
+        min-height: 100vw
+    }  
+    .lowerFooter, .mainBody, .externalBox, .heading, .lowerHeader
+    {
+        grid-template-columns: 1fr;
+        text-align: center;
+        font-size: 16px;
+    } 
+    .mockupImage
+    {
+        width: 80vw;
+    }
+    .logoImage
+    {
+        width: 30vw;
+        float: left;
+    }
+    .headerButton
+    {
+        padding: 5px 25px;
+        font-size: 0.8em
+    }
+    .mainBody > div
+    {
+        margin-left: 0;
+        padding: 2%;
+        width: 90%;
+        margin-left: 3%;
+    }
+    .internalBoxImage
+    {
+        height: 30vw;
+        padding: 5px;
+    }   
+    .footer > .lowerFooter, .footerLogoImage
+    {
+        text-align: left;
+        padding: 3%;
+    }
+    .footerLogoImage
+    {
+        padding-top: 8%;
+    }
+    .lowerFooter > div:nth-child(2), .lowerFooter > div:nth-child(3)
+    {
+        margin-left: 0;
+    }
+    .actionCard
+    {
+        width: 85%;
+        margin-left: 7%;
+        text-align: center;
+        font-size: 0.8em
+    }
+    .actionCard > .actionButton
+    {
+        font-size: 1.2em;
+    }
+    .copyright
+    {
+        margin-top: 10%;
+    }
+}
